@@ -21,16 +21,16 @@ import (
 	"math/big"
 	"time"
 
-	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v4"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/config"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/signature"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	gsrpc "github.com/Sepior/go-substrate-rpc-client/v4"
+	"github.com/Sepior/go-substrate-rpc-client/v4/config"
+	"github.com/Sepior/go-substrate-rpc-client/v4/signature"
+	"github.com/Sepior/go-substrate-rpc-client/v4/types"
 )
 
 func Example_simpleConnect() {
 	// The following example shows how to instantiate a Substrate API and use it to connect to a node
 
-	api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL)
+	api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL, nil)
 	if err != nil {
 		panic(err)
 	}
@@ -59,7 +59,7 @@ func Example_listenToNewBlocks() {
 	//
 	// NOTE: The example runs until 10 blocks are received or until you stop it with CTRL+C
 
-	api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL)
+	api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL, nil)
 	if err != nil {
 		panic(err)
 	}
