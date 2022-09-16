@@ -11,7 +11,7 @@ import (
 var testBeefy Beefy
 
 func TestMain(m *testing.M) {
-	cl, err := client.Connect(config.Default().RPCURL)
+	cl, err := client.Connect(config.Default().RPCURL, nil)
 	if err != nil {
 		panic(err)
 	}

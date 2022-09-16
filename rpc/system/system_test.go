@@ -34,7 +34,7 @@ func TestMain(m *testing.M) {
 		panic(err)
 	}
 
-	cl, err := client.Connect(s.URL)
+	cl, err := client.Connect(s.URL, nil)
 	// cl, err := client.Connect(config.Default().RPCURL)
 	if err != nil {
 		panic(err)

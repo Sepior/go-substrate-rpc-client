@@ -35,7 +35,7 @@ func TestMain(m *testing.M) {
 		panic(err)
 	}
 
-	cl, err := client.Connect(s.URL)
+	cl, err := client.Connect(s.URL, nil)
 	// cl, err := client.Connect(config.Default().RPCURL)
 	// cl, err := client.Connect("ws://127.0.0.1:9944")
 	if err != nil {

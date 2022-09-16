@@ -51,13 +51,13 @@ func (c client) URL() string {
 }
 
 // Connect connects to the provided url
-func Connect(url string) (Client, error) {
+func Connect(url string, headers map[string]string) (Client, error) {
 	log.Printf("Connecting to %v...", url)
 
 	ctx, cancel := context.WithTimeout(context.Background(), config.Default().DialTimeout)
 	defer cancel()
 
-	c, err := gethrpc.DialContext(ctx, url)
+	c, err := gethrpc.DialContext(ctx, url, headers)
 	if err != nil {
 		return nil, err
 	}

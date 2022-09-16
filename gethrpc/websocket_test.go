@@ -125,7 +125,7 @@ func TestClientWebsocketPing(t *testing.T) {
 	defer cancel()
 	defer server.Shutdown(ctx)
 
-	client, err := DialContext(ctx, "ws://"+server.Addr)
+	client, err := DialContext(ctx, "ws://"+server.Addr, nil)
 	if err != nil {
 		t.Fatalf("client dial error: %v", err)
 	}
