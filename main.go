@@ -26,7 +26,11 @@ type SubstrateAPI struct {
 	Client client.Client
 }
 
-func NewSubstrateAPI(url string, headers map[string]string) (*SubstrateAPI, error) {
+func NewSubstrateAPI(url string) (*SubstrateAPI, error) {
+	return NewSubstrateAPIWithHeaders(url, nil)
+}
+
+func NewSubstrateAPIWithHeaders(url string, headers map[string]string) (*SubstrateAPI, error) {
 	cl, err := client.Connect(url, headers)
 	if err != nil {
 		return nil, err

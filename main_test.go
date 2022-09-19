@@ -30,7 +30,7 @@ import (
 func Example_simpleConnect() {
 	// The following example shows how to instantiate a Substrate API and use it to connect to a node
 
-	api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL, nil)
+	api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL)
 	if err != nil {
 		panic(err)
 	}
@@ -59,7 +59,7 @@ func Example_listenToNewBlocks() {
 	//
 	// NOTE: The example runs until 10 blocks are received or until you stop it with CTRL+C
 
-	api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL, nil)
+	api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL)
 	if err != nil {
 		panic(err)
 	}
