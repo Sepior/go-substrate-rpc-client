@@ -21,13 +21,13 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/scale"
+	"github.com/Sepior/go-substrate-rpc-client/v4/scale"
 
 	fuzz "github.com/google/gofuzz"
 
+	"github.com/Sepior/go-substrate-rpc-client/v4/hash"
+	. "github.com/Sepior/go-substrate-rpc-client/v4/types"
 	"github.com/btcsuite/btcutil/base58"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/hash"
-	. "github.com/centrifuge/go-substrate-rpc-client/v4/types"
 	"github.com/stretchr/testify/assert"
 )
 

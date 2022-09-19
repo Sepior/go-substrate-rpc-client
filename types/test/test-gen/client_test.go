@@ -27,14 +27,14 @@ import (
 	"testing"
 	"time"
 
-	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v4"
-	mockClient "github.com/centrifuge/go-substrate-rpc-client/v4/client/mocks"
-	mockChain "github.com/centrifuge/go-substrate-rpc-client/v4/rpc/chain/mocks"
-	mockState "github.com/centrifuge/go-substrate-rpc-client/v4/rpc/state/mocks"
+	gsrpc "github.com/Sepior/go-substrate-rpc-client/v4"
+	mockClient "github.com/Sepior/go-substrate-rpc-client/v4/client/mocks"
+	mockChain "github.com/Sepior/go-substrate-rpc-client/v4/rpc/chain/mocks"
+	mockState "github.com/Sepior/go-substrate-rpc-client/v4/rpc/state/mocks"
 
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpc"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/rpcmocksrv"
-	"github.com/centrifuge/go-substrate-rpc-client/v4/types"
+	"github.com/Sepior/go-substrate-rpc-client/v4/rpc"
+	"github.com/Sepior/go-substrate-rpc-client/v4/rpcmocksrv"
+	"github.com/Sepior/go-substrate-rpc-client/v4/types"
 	"github.com/stretchr/testify/assert"
 )
 
