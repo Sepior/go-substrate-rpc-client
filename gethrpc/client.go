@@ -22,13 +22,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"log"
 	"net/url"
 	"reflect"
 	"strconv"
 	"sync/atomic"
 	"time"
-
-	"github.com/ethereum/go-ethereum/log"
 )
 
 var (
@@ -294,10 +293,13 @@ func (c *Client) CallContext(ctx context.Context, result interface{}, method str
 	// dispatch has accepted the request and will close the channel when it quits.
 	switch resp, err := op.wait(ctx, c); {
 	case err != nil:
+		log.Warn(fmt.Sprintln(resp))
 		return err
 	case resp.Error != nil:
+		log.Warn(fmt.Sprintln(resp))
 		return resp.Error
 	case len(resp.Result) == 0:
+		log.Warn(fmt.Sprintln(resp))
 		return ErrNoResult
 	default:
 		return json.Unmarshal(resp.Result, &result)
